@@ -21,7 +21,7 @@ WITH top_jobs AS (
     INNER JOIN company_dim
         ON company_dim.company_id = job_postings_fact.company_id
     WHERE
-        job_title_short = 'Data Analyst' AND
+        job_title_short = 'Data Scientist' AND
         salary_year_avg IS NOT NULL AND
         job_location = 'Anywhere'
     ORDER BY 

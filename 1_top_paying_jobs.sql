@@ -5,7 +5,7 @@ Question: What are the highest-paying remote Data Analyst jobs?
 - Focus only on postings with specified salaries (exclude rows with NULL salary values).
 - Purpose: Highlight top-paying opportunities for Data Analysts, offering insights into employer demand and compensation trends.
 */
-CREATE TABLE highest_paying_remote_jobs AS
+CREATE TABLE highest_paying_remote_jobs1 AS
 SELECT
     job_id,
     company_dim.name AS company_name,
@@ -17,7 +17,7 @@ FROM
 INNER JOIN company_dim
     ON company_dim.company_id = job_postings_fact.company_id
 WHERE
-    job_title_short = 'Data Analyst' AND
+    job_title_short = 'Data Scientist' AND
     salary_year_avg IS NOT NULL AND
     job_location = 'Anywhere'
 ORDER BY 
